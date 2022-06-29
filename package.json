@@ -1,5 +1,5 @@
 {
-    "name": "w3",
+    "name": "template",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -8,6 +8,11 @@
         "dev": "cross-env NODE_ENV=development webpack",
         "build": "cross-env NODE_ENV=production webpack"
     },
+    "browserslist": [
+        "> 0.25%, not dead",
+        "> 1%",
+        "last 2 versions"
+    ],
     "keywords": [],
     "author": "Vakhrushev Danil <danil.e.vakhrushev@gmail.com>",
     "license": "ISC",

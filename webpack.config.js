@@ -29,18 +29,33 @@ const filename = (ext) => (devMode ? `[name].${ext}` : `[name].[contenthash].${e
 
 module.exports = {
     mode,
+
     context: path.resolve(__dirname, "src"),
+
+    resolve: {
+        extensions: [".js", ".json"],
+        alias: {
+            "@modules": `${path.resolve(__dirname)}/node_modules`,
+        },
+    },
+
     entry: {
         main: "./index.js",
     },
+
     output: {
         filename: `./js/${filename("js")}`,
         path: path.resolve(__dirname, "dist"),
         assetModuleFilename: "assets/[hash][ext][query]",
         clean: true,
     },
+
+    target: devMode ? "web" : "browserslist",
+
     devtool: devMode ? "source-map" : false,
+
     optimization: optimization(),
+
     devServer: {
         open: {
             app: {
@@ -49,7 +64,9 @@ module.exports = {
         },
         hot: true,
         port: 8080,
+        liveReload: true,
     },
+
     plugins: [
         new HtmlWebpackPlugin({
             template: "./index.html",
@@ -61,6 +78,7 @@ module.exports = {
             filename: `./css/${filename("css")}`,
         }),
     ],
+
     module: {
         rules: [
             {
