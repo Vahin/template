@@ -1,0 +1,65 @@
+// Брейкпоинты
+$width_desktop_1: 0;
+$width_desktop_2: 0;
+$width_desktop_3: 0;
+
+$width_mobile_1: 0;
+$width_mobile_2: 0;
+$width_mobile_3: 0;
+
+// Шрифты
+$font_1: sans-serif;
+
+// Размер шрифта
+$fsz: 16px;
+
+// Цвета
+$black_1: #000000;
+
+$white_1: #fff;
+
+$gray_1: #4f5665;
+
+$green_1: #147e45;
+
+// Тени
+$shadow_green_1: 0px 4px 20px rgba(13, 77, 42, 0.33);
+
+//Скорость анимации
+$transition: 0.3s;
+
+$transition_burger: $transition;
+
+//Миксины
+
+@mixin fonttype_1($color: $black_2, $lheight: 117%) {
+    font-family: $font_1;
+    font-style: normal;
+    font-weight: 500;
+    font-size: $fsz * 2.1875; // 35px
+    line-height: $lheight;
+    color: $color;
+
+    @media (max-width: $width_mobile_1) {
+        font-size: $fsz * 1.375; // 22px
+    }
+}
+
+@mixin fonttype_2($color: $black_2, $lheight: 117%) {
+    font-family: $font_1;
+    font-style: normal;
+    font-weight: 500;
+    font-size: $fsz * 1.375; // 22px
+    line-height: $lheight;
+    color: $color;
+
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 23px;
+
+    @media (max-width: $width_mobile_1) {
+        font-size: $fsz; // 16px
+    }
+}

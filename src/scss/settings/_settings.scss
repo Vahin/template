@@ -1,0 +1,28 @@
+// Обнуление
+@import "./zerostyle";
+
+// Подключение шрифтов
+@import "./fonts";
+
+// Переменные
+@import "./variables";
+
+// Остальное
+
+body {
+    font-family: $font-1;
+    font-size: $fsz;
+    color: $black-1;
+}
+
+.wrapper {
+    overflow: hidden;
+    min-height: 100vh;
+    position: relative;
+}
+
+.container {
+    max-width: $width_desktop_2;
+    margin: 0 auto;
+    padding: 0 12px;
+}
