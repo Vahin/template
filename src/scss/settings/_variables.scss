@@ -1,65 +1,31 @@
 // Брейкпоинты
-$width_desktop_1: 0;
-$width_desktop_2: 0;
-$width_desktop_3: 0;
+$sizes: (
+    "ms": 320px,
+    "mm": 600px,
+    "ml": 900px,
+    "ds": 1050px,
+    "dm": 1200px,
+    "dl": 1600px,
+);
 
-$width_mobile_1: 0;
-$width_mobile_2: 0;
-$width_mobile_3: 0;
+// *** ms - mobile small, dm - desctop medium, пример дополнительных крайних значений: mxl, dxs *** //
 
 // Шрифты
-$font_1: sans-serif;
-
-// Размер шрифта
-$fsz: 16px;
+$font-1: "Arial", sans-serif;
 
 // Цвета
-$black_1: #000000;
+$black-1: #000000;
 
-$white_1: #fff;
+$white-1: #fff;
 
-$gray_1: #4f5665;
+$gray-1: #4f5665;
 
-$green_1: #147e45;
+$green-1: #147e45;
 
 // Тени
-$shadow_green_1: 0px 4px 20px rgba(13, 77, 42, 0.33);
+$shadow-green: 0px 4px 20px rgba(13, 77, 42, 0.33);
 
 //Скорость анимации
-$transition: 0.3s;
+$duration: 0.3s;
 
-$transition_burger: $transition;
-
-//Миксины
-
-@mixin fonttype_1($color: $black_2, $lheight: 117%) {
-    font-family: $font_1;
-    font-style: normal;
-    font-weight: 500;
-    font-size: $fsz * 2.1875; // 35px
-    line-height: $lheight;
-    color: $color;
-
-    @media (max-width: $width_mobile_1) {
-        font-size: $fsz * 1.375; // 22px
-    }
-}
-
-@mixin fonttype_2($color: $black_2, $lheight: 117%) {
-    font-family: $font_1;
-    font-style: normal;
-    font-weight: 500;
-    font-size: $fsz * 1.375; // 22px
-    line-height: $lheight;
-    color: $color;
-
-    font-family: "Rubik";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 19px;
-    line-height: 23px;
-
-    @media (max-width: $width_mobile_1) {
-        font-size: $fsz; // 16px
-    }
-}
+$duration-burger: $duration;

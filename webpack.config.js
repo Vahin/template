@@ -32,13 +32,6 @@ module.exports = {
 
     context: path.resolve(__dirname, "src"),
 
-    resolve: {
-        extensions: [".js", ".json"],
-        alias: {
-            "@modules": `${path.resolve(__dirname)}/node_modules`,
-        },
-    },
-
     entry: {
         main: "./index.js",
     },
